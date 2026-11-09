@@ -6,32 +6,33 @@
   <title>Transmissões do Poder Legislativo - Câmara Municipal de Coronel Barros</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <style>
     :root {
-      --primary: #5c854b;
-      --primary-dark: #325a1e;
-      --primary-light: #729e60;
-      --accent: #3ebb51;
-      --accent-hover: #319e42;
-      --accent-soft: #eef6ec;
+      /* Identidade Visual Oficial da Câmara Municipal de Coronel Barros */
+      --primary: #006838;
+      --primary-dark: #004d2a;
+      --primary-light: #009739;
+      --accent: #FFCC00;
+      --accent-hover: #e6b800;
+      --accent-soft: #f0f7f2;
       --live-red: #e53935;
       --live-red-dark: #c62828;
       --live-glow: rgba(229, 57, 53, 0.35);
-      --text-main: #21301d;
-      --text-muted: #576b51;
-      --text-light: #8da187;
-      --bg: #f5f7f4;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --text-light: #94a3b8;
+      --bg: #f8fafc;
       --surface: #ffffff;
-      --border: #dbe4d8;
-      --border-focus: #5c854b;
+      --border: #e2e8f0;
+      --border-focus: #006838;
       --radius-sm: 8px;
       --radius-md: 12px;
-      --radius-lg: 18px;
+      --radius-lg: 16px;
       --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
-      --shadow-md: 0 4px 10px rgba(40, 70, 30, 0.08);
-      --shadow-lg: 0 10px 25px rgba(40, 70, 30, 0.12);
+      --shadow-md: 0 4px 12px rgba(0, 104, 56, 0.08);
+      --shadow-lg: 0 10px 25px rgba(0, 104, 56, 0.12);
       --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -46,7 +47,7 @@
     }
 
     body {
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: 'Montserrat', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background-color: var(--bg);
       color: var(--text-main);
       line-height: 1.5;
@@ -56,7 +57,7 @@
       min-height: 100vh;
       overflow-x: hidden;
       scrollbar-width: thin;
-      scrollbar-color: #a4c49b transparent;
+      scrollbar-color: #a3d9bc transparent;
     }
 
     /* Modern slim scrollbar */
@@ -68,7 +69,7 @@
       background: transparent;
     }
     ::-webkit-scrollbar-thumb {
-      background: #a4c49b;
+      background: #a3d9bc;
       border-radius: 4px;
     }
     ::-webkit-scrollbar-thumb:hover {
@@ -130,7 +131,7 @@
     .header-info p {
       font-size: 0.95rem;
       opacity: 0.92;
-      color: #eef6ec;
+      color: rgba(255, 255, 255, 0.9);
       max-width: 650px;
     }
     .header-actions {
@@ -354,10 +355,33 @@
       text-transform: uppercase;
       padding: 0.15rem 0.55rem;
       border-radius: 50px;
-      background: #edf2ea;
+      background: #f1f5f9;
       color: var(--text-muted);
-      border: 1px solid #d4ded1;
+      border: 1px solid var(--border);
     }
+    .btn-calendar-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 1.1rem;
+      background: var(--surface);
+      color: var(--primary);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+    .btn-calendar-link:hover {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
     .offline-text p {
       font-size: 0.85rem;
       color: var(--text-muted);
@@ -417,7 +441,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.35rem;
-      background: #f0f4ee;
+      background: #f1f5f9;
       color: var(--text-muted);
       border: 1px solid var(--border);
       padding: 0.4rem 0.85rem;
@@ -428,7 +452,7 @@
       transition: var(--transition);
     }
     .btn-close-player:hover {
-      background: #e2ebe0;
+      background: #e2e8f0;
       color: var(--text-main);
     }
 
@@ -482,7 +506,7 @@
     }
     .search-input:focus {
       border-color: var(--border-focus);
-      box-shadow: 0 0 0 3px rgba(92, 133, 75, 0.15);
+      box-shadow: 0 0 0 3px rgba(0, 104, 56, 0.15);
     }
     .search-icon {
       position: absolute;
@@ -509,7 +533,7 @@
     /* Video Cards Grid */
     .video-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.25rem;
     }
 
@@ -535,7 +559,7 @@
       position: relative;
       width: 100%;
       aspect-ratio: 16 / 9;
-      background: #1e281b;
+      background: #0f172a;
       overflow: hidden;
     }
     .thumb-wrapper img {
@@ -578,6 +602,7 @@
     .video-card:hover .play-btn-circle {
       transform: scale(1.05);
       background: var(--accent);
+      color: #004d2a;
     }
 
     .thumb-badge {
@@ -617,7 +642,7 @@
       justify-content: space-between;
       font-size: 0.78rem;
       color: var(--text-muted);
-      border-top: 1px solid #edf2ea;
+      border-top: 1px solid #f1f5f9;
       padding-top: 0.65rem;
       margin-top: auto;
     }
@@ -670,7 +695,7 @@
     .spinner {
       width: 28px;
       height: 28px;
-      border: 3px solid #d4ded1;
+      border: 3px solid #e2e8f0;
       border-top-color: var(--primary);
       border-radius: 50%;
       animation: spin 0.8s linear infinite;
@@ -702,6 +727,11 @@
     }
 
     /* Responsive adjustments */
+    @media (max-width: 992px) {
+      .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
     @media (max-width: 768px) {
       .main-header {
         padding: 1.5rem 1rem 1.35rem;
@@ -717,14 +747,15 @@
       .search-box {
         max-width: 100%;
       }
+      .offline-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    @media (max-width: 640px) {
       .video-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
-      }
-    }
-    @media (min-width: 769px) and (max-width: 1024px) {
-      .video-grid {
-        grid-template-columns: repeat(2, 1fr);
       }
     }
   </style>
@@ -779,6 +810,7 @@
           </div>
         </div>
         <div>
+          <a href="https://www.coronelbarros.rs.leg.br/institucional/eventos" target="_blank" rel="noopener noreferrer" class="btn-calendar-link">
             📅 Ver Calendário de Sessões
           </a>
         </div>
@@ -857,6 +889,7 @@
     const CHANNEL_ID = "UCl8gLTIMl99eKsKj7DNUWGg";
 
     // Application State
+    const PAGE_SIZE = 3;
     let pastVideos = [];
     let nextPageToken = null;
     let isLoadingMore = false;
@@ -1019,6 +1052,7 @@
                 </div>
               </div>
               <div>
+                <a href="https://www.coronelbarros.rs.leg.br/institucional/eventos" target="_blank" rel="noopener noreferrer" class="btn-calendar-link">
                   📅 Calendário de Sessões
                 </a>
               </div>
@@ -1049,7 +1083,7 @@
        ========================================================== */
     async function loadPastStreams(isLoadMore = false) {
       try {
-        let url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${CHANNEL_ID}&eventType=completed&type=video&order=date&maxResults=12&key=${API_KEY}`;
+        let url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${CHANNEL_ID}&eventType=completed&type=video&order=date&maxResults=${PAGE_SIZE}&key=${API_KEY}`;
         if (isLoadMore && nextPageToken) {
           url += `&pageToken=${nextPageToken}`;
         }
